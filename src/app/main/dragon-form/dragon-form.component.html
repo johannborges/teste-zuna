@@ -1,0 +1,19 @@
+<div class="dragons_container container">
+    <form class="dragon_form" (submit)="sendForm()" [formGroup]="form">
+        <div class="dragon_title">Entre as informações do dragão:</div>
+
+        <label>
+            <div class="form_label">person</div>
+            <input type="text" class="input" placeholder="Nome do dragão" formControlName="name" autofocus>
+        </label>
+
+        <label>
+            <div class="form_label">person</div>
+            <input type="text" class="input" placeholder="Tipo de dragão" formControlName="type">
+        </label>
+    
+        <div class="form_submit">
+            <button class="button" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

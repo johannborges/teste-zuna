@@ -1,0 +1,15 @@
+@import "../../shared/shared";
+
+.dragon_informations_list{
+    display: grid;
+    grid-row-gap: 30px;
+    
+    padding: 30px;
+
+    .dragon_information_item{
+        span{
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

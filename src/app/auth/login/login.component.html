@@ -1,0 +1,23 @@
+<form class="login_form" (submit)="doLogin()" [formGroup]="form">
+    <div class="login_title">Entre suas credenciais:</div>
+
+    <label>
+        <div class="form_label">person</div>
+        <input type="text" class="input" placeholder="Usuário" formControlName="username" autofocus>
+    </label>
+
+    <label>
+        <div class="form_label">lock</div>
+        <input type="password" class="input" placeholder="Senha" formControlName="password">
+    </label>
+
+    <div class="form_submit">
+        <button class="button" type="submit">Log in</button>
+    </div>
+
+    <div class="forgot_credentials">
+        <a href="javascript:;">Esqueci minhas credenciais</a>
+    </div>
+
+    <a href="javascript:;" class="signup">Cadastre-se</a>
+</form>
