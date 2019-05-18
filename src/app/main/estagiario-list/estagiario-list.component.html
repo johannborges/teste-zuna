@@ -1,6 +1,10 @@
 <div class="container estagiarios_list-holder">
     <div class="estagiarios_list-title">Lista de estagiários</div>
 
+    <div class="new_estagiario">
+        <a [routerLink]="['/main/create-estagiario/']" class="button" title="Novo estagiário">Cadastrar novo estagiário</a>
+    </div>
+
     <ul class="estagiarios_list" *ngIf="estagiarios">
         <li class="estagiario_item">
             <div>Nome</div>
@@ -16,7 +20,6 @@
             <div title="{{ estagiario.cpf }}">{{ estagiario.cpf }}</div>
             <div title="{{ estagiario.phoneNumber }}">{{ estagiario.phoneNumber }}</div>
             <div class="estagiario_actions">
-                <a [routerLink]="['/main/edit-estagiario/', estagiario.id]" title="Editar">edit</a>
                 <a href="javascript:;" class="delete" title="Deletar" (click)="deleteEstagiario(estagiario.id)">close</a>
             </div>
         </li>

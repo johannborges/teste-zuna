@@ -8,7 +8,8 @@ import { SharedModule } from '../shared/shared.module';
 
 import { MainComponent } from './main.component';
 import { EstagiarioListComponent } from './estagiario-list/estagiario-list.component';
-import { EstagiarioFormComponent } from './estagiario-form/estagiario-form.component';
+import { CreateEstagiarioComponent } from './create-estagiario/create-estagiario.component';
+import { CompleteEstagiarioComponent } from './complete-estagiario/complete-estagiario.component';
 
 import { EstagiarioService } from '../services/estagiario.service';
 import { EstagiariosServiceMock } from '../services/estagiario.service.mock';
@@ -32,12 +33,12 @@ const routes: Routes = [
         
             {
                 path: 'create-estagiario',
-                component: EstagiarioFormComponent
+                component: CreateEstagiarioComponent
             },
         
             {
-                path: 'edit-estagiario/:id',
-                component: EstagiarioFormComponent
+                path: 'complete-estagiario/:id',
+                component: CompleteEstagiarioComponent
             }
         ]
     }
@@ -54,7 +55,8 @@ const routes: Routes = [
     declarations: [
         MainComponent,
         EstagiarioListComponent,
-        EstagiarioFormComponent
+        CreateEstagiarioComponent,
+        CompleteEstagiarioComponent
     ],
 
     providers: [

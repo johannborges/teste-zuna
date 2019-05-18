@@ -1,24 +1,28 @@
-<div class="dragons_container container">
-    <form class="dragon_form" (submit)="sendForm()" [formGroup]="form">
-        <div class="dragon_title">Entre as informações do estagiário:</div>
+<div class="container">
+    <form class="estagiario_form" (submit)="sendForm()" [formGroup]="form">
+        <div class="form_title">Entre as informações do estagiário</div>
 
+        <div class="return">
+            <a [routerLink]="['/main/list-estagiarios/']" class="button" title="Estagiários">Visualizar estagiários</a>
+        </div>
+    
         <label>
-            <div class="form_label">person</div>
+            <div class="input_label">Nome:</div>
             <input type="text" class="input" placeholder="Nome" formControlName="name" autofocus>
         </label>
 
         <label>
-            <div class="form_label">mail</div>
+            <div class="input_label">Email:</div>
             <input type="text" class="input" placeholder="Email" formControlName="email">
         </label>
 
         <label>
-            <div class="form_label">short_text</div>
+            <div class="input_label">CPF:</div>
             <input type="text" class="input" placeholder="CPF" formControlName="cpf">
         </label>
 
         <label>
-            <div class="form_label">phone</div>
+            <div class="input_label">Telefone:</div>
             <input type="text" class="input" placeholder="Telefone" formControlName="phoneNumber">
         </label>
     

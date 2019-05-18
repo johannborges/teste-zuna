@@ -22,9 +22,12 @@ export class EstagiarioService {
         return this.httpClient.get<Estagiario>(`${environment.uri}estagiario/${id}`);
     }
 
-    createEstagiario(name: string, email: string, cpf: string, phoneNumber: string){
-        let date = new Date().toISOString();
-
+    createEstagiario(
+        name: string,
+        email: string,
+        cpf: string,
+        phoneNumber: string
+    ){
         return this.httpClient.post(`${environment.uri}estagiario/`, {
             "name": name,
             "email": email,
@@ -33,12 +36,38 @@ export class EstagiarioService {
         });
     }
 
-    editEstagiario(id: string, name: string, email: string, cpf: string, phoneNumber: string){
+    completeEstagiario(
+        id: string,
+        name: string,
+        email: string,
+        cpf: string,
+        phoneNumber: string,
+        birthday: string,
+        cep: string,
+        city: string,
+        fu: string,
+        university: string,
+        course: string,
+        campus: string,
+        turn: string,
+        semester: string,
+        finishEta: string
+    ){
         return this.httpClient.put(`${environment.uri}estagiario/${id}`, {
             "name": name,
             "email": email,
             "cpf": cpf,
-            "phoneNumber": phoneNumber
+            "phoneNumber": phoneNumber,
+            "birthday": birthday,
+            "cep": cep,
+            "city": city,
+            "fu": fu,
+            "university": university,
+            "course": course,
+            "campus": campus,
+            "turn": turn,
+            "semester": semester,
+            "finishEta": finishEta
         });
     }
 

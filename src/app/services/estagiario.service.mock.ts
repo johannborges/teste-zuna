@@ -30,11 +30,32 @@ export class EstagiariosServiceMock {
         ));
     }
 
-    createEstagiario(name: string, type: string){
+    createEstagiario(
+        name: string,
+        email: string,
+        cpf: string,
+        phoneNumber: string
+    ){
         return of(true);
     }
 
-    editEstagiario(id: string, name: string, type: string){
+    completeEstagiario(
+        id: string,
+        name: string,
+        email: string,
+        cpf: string,
+        phoneNumber: string,
+        birthday: string,
+        cep: string,
+        city: string,
+        fu: string,
+        university: string,
+        course: string,
+        campus: string,
+        turn: string,
+        semester: string,
+        finishEta: string
+    ){
         return of(true);
     }
 

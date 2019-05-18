@@ -1,0 +1,94 @@
+<div class="container">
+    <form class="estagiario_form" (submit)="sendForm()" [formGroup]="form">
+        <div class="form_title">Conclua seu cadastro</div>
+
+        <div class="return">
+            <a [routerLink]="['/main/list-estagiarios/']" class="button" title="Estagiários">Visualizar estagiários</a>
+        </div>
+
+        <label>
+            <div class="input_label">Nome:</div>
+            <input type="text" class="input" placeholder="Nome" formControlName="name" autofocus readonly>
+        </label>
+
+        <label>
+            <div class="input_label">Email:</div>
+            <input type="text" class="input" placeholder="Email" formControlName="email" readonly>
+        </label>
+
+        <label>
+            <div class="input_label">CPF:</div>
+            <input type="text" class="input" placeholder="CPF" formControlName="cpf" readonly>
+        </label>
+
+        <label>
+            <div class="input_label">Telefone:</div>
+            <input type="text" class="input" placeholder="Telefone" formControlName="phoneNumber" readonly>
+        </label>
+
+        <label>
+            <div class="input_label">Data de nascimento:</div>
+            <input type="date" class="input" placeholder="Nascimento" formControlName="birthdate" max="{{ maxDate }}">
+        </label>
+
+        <label>
+            <div class="input_label">CEP:</div>
+            <input type="text" class="input" placeholder="CEP" formControlName="cep">
+        </label>
+
+        <label>
+            <div class="input_label">Cidade:</div>
+            <input type="text" class="input" placeholder="Cidade" formControlName="city">
+        </label>
+
+        <label>
+            <div class="input_label">UF:</div>
+
+            <select class="input" formControlName="fu">
+                <option value="RS" selected>RS</option>
+            </select>
+        </label>
+
+        <label>
+            <div class="input_label">Universidade:</div>
+
+            <select class="input" formControlName="university">
+                <option value="UFRGS" selected>UFRGS</option>
+            </select>
+        </label>
+
+        <label>
+            <div class="input_label">Curso:</div>
+            <input type="text" class="input" placeholder="Curso" formControlName="course">
+        </label>
+
+        <label>
+            <div class="input_label">Campus:</div>
+            <input type="text" class="input" placeholder="Campus" formControlName="campus">
+        </label>
+
+        <label>
+            <div class="input_label">Turno:</div>
+            
+            <select class="input" formControlName="turn">
+                <option value="manha" selected>Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+        </label>
+
+        <label>
+            <div class="input_label">Semestre:</div>
+            <input type="text" class="input" placeholder="Semestre" formControlName="semester">
+        </label>
+
+        <label>
+            <div class="input_label">Previsão de término:</div>
+            <input type="date" class="input" placeholder="Previsão de término" formControlName="finishEta" min="{{ minDate }}">
+        </label>
+    
+        <div class="form_submit">
+            <button class="button" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
