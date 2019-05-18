@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
             let controls = this.form.controls;
 
             if(this.userService.doLogin(controls.username.value, controls.password.value)){
-                this.router.navigate(["/main/list-dragons"]);
+                this.router.navigate(["/main/list-estagiarios"]);
             }
 
             else{

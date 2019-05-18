@@ -1,36 +1,3 @@
-<button id="open_menu" (click)="toggleMenu()">menu</button>
-
-<div id="floating_menu" [ngClass]="{ 'menuOpen': menuOpen }">
-    <div class="page_description">
-        <div class="page_title">Dragões</div>
-        <div class="page_subtitle">Catálogo das mais majestosas criaturas</div>
-
-        <ul class="page_menu">
-            <li class="menu_item">
-                <a [routerLink]="['/main/list-dragons']">
-                    <span class="menu_item_icon">list</span>
-
-                    <span class="menu_item_text">Listar dragões</span>
-                </a>
-            </li>
-
-            <li class="menu_item">
-                <a [routerLink]="['/main/create-dragon']">
-                    <span class="menu_item_icon">plus_one</span>
-
-                    <span class="menu_item_text">Criar novo dragão</span>
-                </a>
-            </li>
-
-            <li class="menu_item">
-                <a [routerLink]="['/auth/login']">
-                    <span class="menu_item_icon">thumb_down</span>
-
-                    <span class="menu_item_text">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>

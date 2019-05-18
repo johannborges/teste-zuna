@@ -7,9 +7,6 @@ import { SharedModule } from './shared/shared.module';
 import { InterceptorModule } from './interceptor/interceptor.module';
 
 import { AppComponent } from './app.component';
-import { DragonsService } from './services/dragons.service';
-import { DragonsServiceMock } from './services/dragons.service.mock';
-import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
     {
@@ -47,12 +44,7 @@ const routes: Routes = [
     ],
 
     providers: [
-        HttpClientModule,
-
-        {
-            provide: DragonsService,
-            useClass: environment.mock ? DragonsServiceMock : DragonsService
-        }
+        HttpClientModule
     ],
     
     bootstrap: [AppComponent]

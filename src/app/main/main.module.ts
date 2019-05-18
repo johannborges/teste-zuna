@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+import { environment } from 'src/environments/environment';
+
 import { SharedModule } from '../shared/shared.module';
 
 import { MainComponent } from './main.component';
-import { DragonListComponent } from './dragon-list/dragon-list.component';
-import { DragonFormComponent } from './dragon-form/dragon-form.component';
-import { DragonDetailsComponent } from './dragon-details/dragon-details.component';
+import { EstagiarioListComponent } from './estagiario-list/estagiario-list.component';
+import { EstagiarioFormComponent } from './estagiario-form/estagiario-form.component';
+
+import { EstagiarioService } from '../services/estagiario.service';
+import { EstagiariosServiceMock } from '../services/estagiario.service.mock';
 
 const routes: Routes = [
     {
@@ -17,28 +21,23 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'list-dragons',
+                redirectTo: 'list-estagiarios',
                 pathMatch: 'full'
             },
         
             {
-                path: 'list-dragons',
-                component: DragonListComponent
+                path: 'list-estagiarios',
+                component: EstagiarioListComponent
             },
         
             {
-                path: 'create-dragon',
-                component: DragonFormComponent
+                path: 'create-estagiario',
+                component: EstagiarioFormComponent
             },
         
             {
-                path: 'edit-dragon/:id',
-                component: DragonFormComponent
-            },
-        
-            {
-                path: 'view-dragon/:id',
-                component: DragonDetailsComponent
+                path: 'edit-estagiario/:id',
+                component: EstagiarioFormComponent
             }
         ]
     }
@@ -54,9 +53,15 @@ const routes: Routes = [
 
     declarations: [
         MainComponent,
-        DragonListComponent,
-        DragonFormComponent,
-        DragonDetailsComponent
+        EstagiarioListComponent,
+        EstagiarioFormComponent
+    ],
+
+    providers: [
+        {
+            provide: EstagiarioService,
+            useClass: environment.mock ? EstagiariosServiceMock : EstagiarioService
+        }
     ]
 })
 

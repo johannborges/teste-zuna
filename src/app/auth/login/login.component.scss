@@ -1,7 +1,11 @@
 @import "../../shared/shared";
 
 .login_form{
-    padding: 75px 30px 0;
+    max-width: 420px;
+    margin: 150px auto;
+    padding: 50px;
+
+    background: $white;
 
     .login_title{
         font-size: 14px;
@@ -48,7 +52,7 @@
     }
 
     .form_submit{
-        padding-top: 15px;
+        padding: 15px 0 0;
 
         .button{
             width: 100%;
@@ -66,43 +70,6 @@
         a{
             font-size: 12px;
             color: $grey;
-        }
-    }
-
-    .signup{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-
-        display: block;
-        width: 100%;
-
-        background: $grey;
-
-        color: $white;
-        text-align: center;
-        line-height: 100px;
-
-        transition: background .3s;
-
-        &:hover{
-            background: lighten($grey, 10%);
-        }
-    }
-}
-
-@media(max-width: 749px){
-    .login_form{
-        padding: 30px;
-
-        .signup{
-            position: static;
-
-            margin-top: 60px;
-            border-radius: 5px;
-
-            line-height: 50px;
         }
     }
 }

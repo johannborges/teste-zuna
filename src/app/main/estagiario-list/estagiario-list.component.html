@@ -1,0 +1,24 @@
+<div class="container estagiarios_list-holder">
+    <div class="estagiarios_list-title">Lista de estagiários</div>
+
+    <ul class="estagiarios_list" *ngIf="estagiarios">
+        <li class="estagiario_item">
+            <div>Nome</div>
+            <div>Email</div>
+            <div>CPF</div>
+            <div>Telefone</div>
+            <div>Ações</div>
+        </li>
+
+        <li class="estagiario_item" *ngFor="let estagiario of estagiarios">
+            <div title="{{ estagiario.name }}">{{ estagiario.name }}</div>
+            <div title="{{ estagiario.email }}">{{ estagiario.email }}</div>
+            <div title="{{ estagiario.cpf }}">{{ estagiario.cpf }}</div>
+            <div title="{{ estagiario.phoneNumber }}">{{ estagiario.phoneNumber }}</div>
+            <div class="estagiario_actions">
+                <a [routerLink]="['/main/edit-estagiario/', estagiario.id]" title="Editar">edit</a>
+                <a href="javascript:;" class="delete" title="Deletar" (click)="deleteEstagiario(estagiario.id)">close</a>
+            </div>
+        </li>
+    </ul>
+</div>

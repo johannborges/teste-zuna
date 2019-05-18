@@ -1,34 +1,27 @@
 @import "../../shared/shared";
 
-.dragons_container{
+.estagiarios_list-holder{
     background: $white;
-    border-radius: 5px;
 
-    overflow: auto;
+    margin: 60px auto;
 
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: 100%;
-
-    .dragonlist_title{
-        font-size: 14px;
+    .estagiarios_list-title{
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
         
-        padding: 30px 30px 0;
+        padding: 30px 0 0;
     }
 
-    .dragons_list{
+    .estagiarios_list{
         display: grid;
 
         min-width: 760px;
         padding: 30px 0;
 
-        .dragon_item{
+        .estagiario_item{
             display: inline-grid;
-            grid-template-columns: 80px calc(30% - 40px) calc(30% - 40px) 20% 20%;
+            grid-template-columns: 20% 20% 20% 20% 20%;
             align-items: center;
 
             padding: 7.5px 0;
@@ -41,17 +34,7 @@
                 background: $lightgrey;
             }
 
-            .dragon_picture{
-                font-size: 0;
-                text-align: right;
-
-                img{
-                    border: 1px solid $black;
-                    max-width: 100%;
-                }
-            }
-
-            .dragon_actions{
+            .estagiario_actions{
                 a{
                     display: inline-block;
                     vertical-align: middle;
@@ -75,20 +58,14 @@
                 font-weight: 700;
             }
 
+            > div{
+                padding: 0 15px;
+                word-wrap: break-word;
+            }
+
             > :last-of-type{
                 text-align: right;
-                padding-right: 30px;
-            }
-
-            > :not(:first-of-type):not(:last-of-type){
-                padding-left: 15px;
             }
         }
-    }
-}
-
-@media(max-width: 749px){
-    .dragons_container{
-        position: static;
     }
 }
